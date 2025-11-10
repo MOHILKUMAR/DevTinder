@@ -21,3 +21,4 @@
 -You Should not be access other route without login
 -If token is not present, redirect user to login page 
 -logout 
+-Profile
