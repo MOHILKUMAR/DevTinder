@@ -22,3 +22,8 @@
 -If token is not present, redirect user to login page 
 -logout 
 -Profile
+-Get the feed and add the feed in the store 
+-build the user card on feed  
+-Edit Profile Feature
+-Show Toast Message on save of profile
+-See all my connections.
