@@ -6,6 +6,7 @@ import appStore from "./utils/appStore";
 import Feed from "./components/Feed.jsx";
 import Profile from "./components/Profile.jsx";
 import Connections from "./components/Connections.jsx";
+import Request from "./components/Request.jsx";
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
            <Route path="/login" element={<Login /> }/>
            <Route path="/profile" element={<Profile />} />
            <Route path = "/connections" element={<Connections />} />
-           {/* <Route path="/requests" element = {} />  */}
+           <Route path="/request" element = {<Request />} /> 
           </Route>
           
 
