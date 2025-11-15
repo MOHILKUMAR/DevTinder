@@ -1,5 +1,5 @@
 import React from 'react'
-import EditProfile from "./editProfile.jsx";
+import EditProfile from "./EditProfile";
 import { useSelector } from 'react-redux';
 
 const Profile = () => {
