@@ -34,3 +34,7 @@ Remaining:
 -SignUp New User
 -E2ETesting
 
+-Edit the login from 
+   -ADD the input of firstName , LastName and store the value with the help of useState 
+   -Than toggle the button and UI of the input Field.
+    

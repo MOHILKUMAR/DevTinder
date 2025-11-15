@@ -29,6 +29,9 @@ const Navbar = () => {
         <div className="flex-1">
           <Link to = "/" className="btn btn-ghost text-xl">DevTinder</Link>
         </div>
+        <div className='mr-10 flex justify-center'>
+         <Link to="/">Feed</Link>
+        </div>
         {user && (  <div className="flex gap-2">   
           <div className='flex items-center'> Welcome, {user.firstName}</div>  
           <div className="dropdown dropdown-end mr-5">
