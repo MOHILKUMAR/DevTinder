@@ -8,9 +8,9 @@ import UserCard from './UserCard'
 
 const Feed = () => {
   
-  const feed = useSelector((store) => store.feed);
+
   const dispatch = useDispatch();
-  
+  const feed = useSelector((store) => store.feed);
   const getFeed =  async () => {
      
     if(feed) return;
@@ -18,8 +18,8 @@ const Feed = () => {
     const res = await axios.get(BASE_URL + "/feed" ,{
       withCredentials : true,
     });
-    // console.log(res.data);
-    dispatch(addFeed(res.data));
+    console.log(res.data.data);
+    dispatch(addFeed(res.data.data));
     }catch(err){
       console.err(err);
     }
@@ -31,13 +31,18 @@ const Feed = () => {
   },[]);
    
   // feed && console.log(feed.data[0]); 
+
+  if(!feed) return ;
+
+  if(feed.length === 0) return <h1>user not found</h1>
+
   return (
     
-  feed && <div className=' flex justify-center items-center my-10'>
+  feed && (<div className=' flex justify-center items-center my-10'>
       {
-        <UserCard  user =  {feed.data[0]} />
+        <UserCard  user =  {feed[0]} />
       }
-    </div>
+    </div>)
   
   )
 }
